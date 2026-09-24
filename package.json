@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-docket-alarm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Docket Alarm MCP — state + county + federal court dockets (docketalarm.com)",
   "type": "module",
   "main": "src/index.ts",
@@ -24,5 +24,9 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-bfc82af16e878a89a213044cbd106bc4f00d6b0b1c315fbb9283e6c44166e228",
+    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
   }
 }
