@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-docket-alarm",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Docket Alarm MCP — state + county + federal court dockets (docketalarm.com)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-docket-alarm": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "docket-alarm"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-docket-alarm.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/docket-alarm",
   "pipeworx": {
-    "sourceHash": "v1-d315613848d43110f6d3523cefd96da3515746f248433e24b409376c2da1027f",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "docket-alarm",
+    "gatewaySlug": "docket-alarm",
+    "sourceHash": "v1-ebff0370e840b7b04adfb06ad1a1600838428aa58a773111e586c6708f78c3a1",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }
